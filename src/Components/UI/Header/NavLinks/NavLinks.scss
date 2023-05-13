@@ -1,0 +1,18 @@
+@import "../../../../Styles/color";
+.NavLinks-div {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  ul {
+    gap: torem(35px);
+    flex-direction: column;
+    display: flex;
+    li {
+      list-style: none;
+    }
+    i {
+      font-size: torem(25px);
+      color: $mygrey;
+    }
+  }
+}
