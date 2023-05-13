@@ -2,31 +2,39 @@
   width: 30%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
   color: rgba(255, 255, 255, 0.872);
   font-family: sans-serif;
 }
 .HomeVideoDetails-div h1 {
-  font-size: 60px;
+  font-size: 3.75rem;
 }
 .HomeVideoDetails-div h3 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .HomeVideoDetails-div .btnGroup {
   display: flex;
-  gap: 5px;
+  gap: 0.3125rem;
 }
 .HomeVideoDetails-div .btnGroup button {
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   width: 100%;
   color: rgb(255, 255, 255);
-  padding: 14px;
+  padding: 0.875rem;
   background-color: rgba(255, 255, 255, 0.105);
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   font-weight: 700;
 }
 .HomeVideoDetails-div .btnGroup button:last-child {
   width: 14%;
+}
+
+/* Smartphones  */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .HomeVideoDetails-div {
+    width: 100%;
+    margin-top: auto;
+  }
 }/*# sourceMappingURL=HomeVideoDetails.css.map */

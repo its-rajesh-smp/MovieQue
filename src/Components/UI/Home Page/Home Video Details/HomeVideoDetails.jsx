@@ -4,7 +4,7 @@ import "./HomeVideoDetails.css";
 function HomeVideoDetails(props) {
   return (
     <div className=" HomeVideoDetails-div ">
-      <h1>SAAS BAHU</h1>
+      <h1>AVATAR</h1>
       <h3>
         <span>2023</span> | <span>1 Season</span> | <span>7 Languages</span>
       </h3>

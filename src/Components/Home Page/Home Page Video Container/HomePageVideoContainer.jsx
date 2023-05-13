@@ -5,7 +5,7 @@ import myvideo from "../../../assets/myvideo.mp4";
 function HomePageVideoContainer(props) {
   return (
     <div className=" HomePageVideoContainer-div ">
-      <div></div>
+      <div className="groundGraidiant"></div>
       <video src={myvideo} autoPlay muted loop></video>
     </div>
   );

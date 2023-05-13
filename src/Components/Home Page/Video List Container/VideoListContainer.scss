@@ -1,16 +1,28 @@
+@import "../../../Styles/color";
 .VideoListContainer-div {
   color: white;
   display: flex;
   flex-direction: column;
   font-family: roboto;
-  margin-bottom: 20px;
+  margin-bottom: torem(20px);
 }
 .VideoListContainer-div__container {
   display: flex;
   gap: 5px;
-  overflow: scroll;
-  width: calc(100vw - 120px);
+  width: calc(100vw - 130px);
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 .VideoListContainer-div__container::-webkit-scrollbar {
   display: none;
+}
+
+//? Media
+/* Smartphones  */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .VideoListContainer-div__container {
+    width: calc(100vw - 0px);
+    padding: 5px;
+    box-sizing: border-box;
+  }
 }

@@ -14,13 +14,16 @@ html {
 }
 
 .remove_header {
-  padding-left: 120px;
+  padding-left: 100px;
 }
 
 /* Smartphones  */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   html {
     font-size: 75%;
+  }
+  .remove_header {
+    padding-left: 0px;
   }
 }
 /* Tablet */

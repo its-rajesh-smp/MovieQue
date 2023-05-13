@@ -14,4 +14,18 @@
 .NavLinks-div ul i {
   font-size: 1.5625rem;
   color: #8e8e90;
+}
+
+/* Smartphones  */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .NavLinks-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .NavLinks-div ul {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=NavLinks.css.map */

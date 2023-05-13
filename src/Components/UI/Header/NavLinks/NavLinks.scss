@@ -16,3 +16,18 @@
     }
   }
 }
+
+//? Media
+/* Smartphones  */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .NavLinks-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ul {
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+}

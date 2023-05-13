@@ -13,7 +13,7 @@ html {
   display: flex;
 }
 .remove_header {
-  padding-left: 120px;
+  padding-left: 100px;
 }
 
 //? Media
@@ -21,6 +21,9 @@ html {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   html {
     font-size: toper(12);
+  }
+  .remove_header {
+    padding-left: 0px;
   }
 }
 /* Tablet */

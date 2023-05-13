@@ -1,8 +1,20 @@
+@import "../../../Styles/color";
 .HomePageVideoDetails-div {
   width: 90vw;
   height: 80vh;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-bottom: 30px;
+  padding-bottom: torem(30px);
+}
+
+//? Media
+/* Smartphones  */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .HomePageVideoDetails-div {
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
 }

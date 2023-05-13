@@ -1,12 +1,13 @@
+@import "../../../Styles/color";
 .VideoPhoto-div {
-  width: 183px;
-  height: 244px;
-  border-radius: 5px;
-  margin-top: 10px;
+  width: torem(183px);
+  height: torem(244px);
+  border-radius: torem(5px);
+  margin-top: torem(10px);
   img {
-    border-radius: 5px;
-    width: 183px;
-    height: 244px;
+    border-radius: torem(5px);
+    width: torem(183px);
+    height: torem(244px);
     object-fit: cover;
   }
 }

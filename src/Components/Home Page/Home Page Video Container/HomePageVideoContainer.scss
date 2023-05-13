@@ -1,30 +1,27 @@
+@import "../../../Styles/color";
 .HomePageVideoContainer-div {
-  width: 100vw;
-  height: 90vh;
-  position: absolute;
-  top: 0;
+  width: 100%;
+  background-color: red;
+  position: fixed;
   left: 0;
+  top: 0;
   z-index: -1;
-
-  div {
-    position: absolute;
-    background-color: red;
-    width: 100vw;
-    bottom: 20px;
-    height: 30%;
-    right: 0px;
+  height: 90vh;
+  .groundGraidiant {
+    width: 100%;
+    height: 50%;
     background: rgb(15, 16, 20);
     background: linear-gradient(
       0deg,
-      rgba(15, 16, 20, 0.9697128851540616) 7%,
-      rgba(15, 16, 20, 1) 35%,
-      rgba(15, 16, 20, 0.7232142857142857) 71%,
+      rgba(15, 16, 20, 1) 11%,
       rgba(15, 16, 20, 0) 100%
     );
+    bottom: 0;
+    position: absolute;
   }
   video {
     object-fit: cover;
-    width: 100vw;
-    height: 80vh;
+    height: 100%;
+    width: 100%;
   }
 }

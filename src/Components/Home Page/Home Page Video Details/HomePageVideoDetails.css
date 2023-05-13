@@ -4,5 +4,15 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-bottom: 30px;
+  padding-bottom: 1.875rem;
+}
+
+/* Smartphones  */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .HomePageVideoDetails-div {
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
 }/*# sourceMappingURL=HomePageVideoDetails.css.map */
