@@ -9,6 +9,14 @@ html {
   font-size: 100%;
 }
 
+.App-div {
+  display: flex;
+}
+
+.remove_header {
+  padding-left: 120px;
+}
+
 /* Smartphones  */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   html {

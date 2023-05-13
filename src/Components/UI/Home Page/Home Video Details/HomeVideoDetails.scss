@@ -1,0 +1,33 @@
+.HomeVideoDetails-div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: rgba(255, 255, 255, 0.872);
+  font-family: sans-serif;
+
+  h1 {
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .btnGroup {
+    display: flex;
+    gap: 5px;
+    button {
+      font-family: sans-serif;
+      font-size: 18px;
+      width: 100%;
+      color: rgb(255, 255, 255);
+      padding: 14px;
+      background-color: rgba(255, 255, 255, 0.105);
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      &:last-child {
+        width: 14%;
+      }
+    }
+  }
+}

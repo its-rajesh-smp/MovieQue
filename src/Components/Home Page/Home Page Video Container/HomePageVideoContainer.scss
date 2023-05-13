@@ -1,0 +1,30 @@
+.HomePageVideoContainer-div {
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  div {
+    position: absolute;
+    background-color: red;
+    width: 100vw;
+    bottom: 20px;
+    height: 30%;
+    right: 0px;
+    background: rgb(15, 16, 20);
+    background: linear-gradient(
+      0deg,
+      rgba(15, 16, 20, 0.9697128851540616) 7%,
+      rgba(15, 16, 20, 1) 35%,
+      rgba(15, 16, 20, 0.7232142857142857) 71%,
+      rgba(15, 16, 20, 0) 100%
+    );
+  }
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 80vh;
+  }
+}

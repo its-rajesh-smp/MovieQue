@@ -1,0 +1,16 @@
+.VideoListContainer-div {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: roboto;
+  margin-bottom: 20px;
+}
+.VideoListContainer-div__container {
+  display: flex;
+  gap: 5px;
+  overflow: scroll;
+  width: calc(100vw - 120px);
+}
+.VideoListContainer-div__container::-webkit-scrollbar {
+  display: none;
+}

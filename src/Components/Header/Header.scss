@@ -1,11 +1,21 @@
 @import "../../Styles/color";
 .Header-div {
-  height: calc(100vh);
+  height: 100vh;
   width: fit-content;
   display: flex;
-  border-right: 1px solid seashell;
   padding: torem(30px);
   box-sizing: border-box;
+  position: fixed;
+  z-index: 1;
+  background: rgb(15, 16, 20);
+  background: linear-gradient(
+    90deg,
+    rgba(15, 16, 20, 0.9697128851540616) 0%,
+    rgba(15, 16, 20, 0.7232142857142857) 37%,
+    rgba(15, 16, 20, 0.7232142857142857) 27%,
+    rgba(15, 16, 20, 0.7232142857142857) 7%,
+    rgba(15, 16, 20, 0) 100%
+  );
   nav {
     width: 100%;
     height: 100%;

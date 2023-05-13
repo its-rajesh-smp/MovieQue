@@ -1,0 +1,23 @@
+.HomePageVideoContainer-div {
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.HomePageVideoContainer-div div {
+  position: absolute;
+  background-color: red;
+  width: 100vw;
+  bottom: 20px;
+  height: 30%;
+  right: 0px;
+  background: rgb(15, 16, 20);
+  background: linear-gradient(0deg, rgba(15, 16, 20, 0.9697128852) 7%, rgb(15, 16, 20) 35%, rgba(15, 16, 20, 0.7232142857) 71%, rgba(15, 16, 20, 0) 100%);
+}
+.HomePageVideoContainer-div video {
+  object-fit: cover;
+  width: 100vw;
+  height: 80vh;
+}/*# sourceMappingURL=HomePageVideoContainer.css.map */

@@ -9,6 +9,12 @@ html {
   background-color: $myback;
   font-size: toper(16);
 }
+.App-div {
+  display: flex;
+}
+.remove_header {
+  padding-left: 120px;
+}
 
 //? Media
 /* Smartphones  */
