@@ -1,22 +1,23 @@
 .HomePageVideoContainer-div {
   width: 100%;
-  background-color: red;
+  background-color: #0f1014;
   position: fixed;
   left: 0;
   top: 0;
   z-index: -1;
   height: 90vh;
 }
-.HomePageVideoContainer-div .groundGraidiant {
+.HomePageVideoContainer-div video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.groundGraidiant {
   width: 100%;
   height: 50%;
   background: rgb(15, 16, 20);
   background: linear-gradient(0deg, rgb(15, 16, 20) 11%, rgba(15, 16, 20, 0) 100%);
   bottom: 0;
   position: absolute;
-}
-.HomePageVideoContainer-div video {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
 }/*# sourceMappingURL=HomePageVideoContainer.css.map */
