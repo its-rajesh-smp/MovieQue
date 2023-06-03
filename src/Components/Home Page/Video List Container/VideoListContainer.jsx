@@ -7,6 +7,7 @@ function VideoListContainer(props) {
     <div className=" VideoListContainer-div ">
       <h3>Latest & Trending</h3>
       <div className="VideoListContainer-div__container">
+        <VideoPhoto left={true} />
         <VideoPhoto />
         <VideoPhoto />
         <VideoPhoto />
@@ -16,16 +17,7 @@ function VideoListContainer(props) {
         <VideoPhoto />
         <VideoPhoto />
         <VideoPhoto />
-        <VideoPhoto />
-        <VideoPhoto />
-        <VideoPhoto />
-        <VideoPhoto />
-        <VideoPhoto />
-        <VideoPhoto />
-        <VideoPhoto />
-        <VideoPhoto />
-        <VideoPhoto />
-        <VideoPhoto />
+        <VideoPhoto right={true} />
       </div>
     </div>
   );

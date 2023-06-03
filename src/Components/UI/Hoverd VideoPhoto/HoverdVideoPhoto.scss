@@ -1,0 +1,65 @@
+.HoverdVideoPhoto-div {
+  height: 340px;
+  width: 300px;
+  top: -50px;
+  left: auto;
+  position: absolute;
+  z-index: 1;
+  border-radius: 10px;
+  background-color: red;
+  font-size: 14px;
+  img {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .HoverdVideoPhoto-div__container {
+    position: absolute;
+    z-index: 100;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    padding: 10px;
+    gap: 15px;
+    justify-content: center;
+    .btnGroup {
+      display: flex;
+      width: 100%;
+      gap: 5px;
+      button {
+        border: none;
+        font-family: roboto;
+        font-size: 14px;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        &:first-child {
+          width: 80%;
+          color: black;
+          background-color: white;
+        }
+        &:last-child {
+          width: 20%;
+          color: white;
+          background-color: #28292d;
+        }
+      }
+    }
+  }
+  .gradiant {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    bottom: 0;
+    background: rgb(22, 24, 31);
+    background: linear-gradient(
+      0deg,
+      rgba(22, 24, 31, 1) 30%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}

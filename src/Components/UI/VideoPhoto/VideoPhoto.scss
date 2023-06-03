@@ -4,7 +4,11 @@
   height: torem(244px);
   border-radius: torem(5px);
   margin-top: torem(10px);
-  img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .VideoPhoto-div__img {
     border-radius: torem(5px);
     width: torem(183px);
     height: torem(244px);

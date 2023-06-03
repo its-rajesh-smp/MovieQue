@@ -11,6 +11,8 @@ function HomePage(props) {
       <HomePageVideoDetails />
       <VideoListContainer />
       <VideoListContainer />
+      <VideoListContainer />
+      <VideoListContainer />
     </div>
   );
 }

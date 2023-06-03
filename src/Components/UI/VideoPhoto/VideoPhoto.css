@@ -3,8 +3,12 @@
   height: 15.25rem;
   border-radius: 0.3125rem;
   margin-top: 0.625rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.VideoPhoto-div img {
+.VideoPhoto-div .VideoPhoto-div__img {
   border-radius: 0.3125rem;
   width: 11.4375rem;
   height: 15.25rem;
