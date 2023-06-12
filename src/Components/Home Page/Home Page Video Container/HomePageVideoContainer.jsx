@@ -6,23 +6,23 @@ function HomePageVideoContainer(props) {
   const [videoOpacity, setVideoOpacity] = useState(10);
 
   // On Scroll Effect Video Pause and Opacity Drop
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const distance = 450;
-  //     const windowY = window.scrollY;
-  //     const newOpacity = 1 - windowY / distance;
-  //     setVideoOpacity(newOpacity >= 0 ? newOpacity : 0);
-  //     if (windowY < distance) {
-  //       videoRef.current.play();
-  //     } else {
-  //       videoRef.current.pause();
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      const distance = 450;
+      const windowY = window.scrollY;
+      const newOpacity = 1 - windowY / distance;
+      setVideoOpacity(newOpacity >= 0 ? newOpacity : 0);
+      if (windowY < distance) {
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div
@@ -30,15 +30,15 @@ function HomePageVideoContainer(props) {
       className=" HomePageVideoContainer-div "
     >
       <div className="groundGraidiant"></div>
-      {/* <video
+      <video
         ref={videoRef}
         src={
-          "https://ff6922ccf3a3ebc647b392a9bbe3b2ac179721c32983d5fb8b90151-apidata.googleusercontent.com/download/storage/v1/b/staging.tumi-asbe-bolei-99b5a.appspot.com/o/myvideo.mp4?jk=ARTXCFHnCpo-iPkH41G0fDJNqS7m17-H02I1NRUJpHNExepRRcAyf8ieM4PoDgBpcPs_2EWdW7cAk3RcUe7sJn_9910YHMn_miUjiAbukqp_-Hz-A1MxycOGjJzHXdw52HHsVIL6DlVOuIChyT8lh_5mUuWJx38wmMeo7Xv4RQrJqb-IFF4iv6CvgdlFK2jp-sJP1L6wE0NzUB93RMUrOiQSx0cawm_xac9jmvOANQnEgm0OoLnTpuvTUcppKBX405ZodhXKIug-U6RtSH3IT0tHhoVCOjdopegdIT2pTmxYpcC_llLlOU1pIdR31EWpN94fxuYn6c7OayrhqoMgY0COt8FZxB5KLSuLi1pLUBu73QWu3Mj5pYebQ0yR2K5WYGWK9iG_LA0IJIbF1M-JDoPYPDvjc8NshlaTT8WyRmZlZ6jpLAG78XQuLB8qKO2ZOS2gujuwD9cj92lSZMbWt5O6WRQsV5RsIsQFuzFGAmJUqBD6f7qM-hFdn9oUqV8vuZ0b9I5OhICXaqXhkivMcQKI-w5G-gLH_m_nF5dzDbkrjGh7xrCB4GLm7aClQg7PcICvOgwM-Rc-gyZdS5lblJNqHE0lUzsTSxZNKe8fObeOtmD4oD8rf0E_ekhlbcVAaT85syUQOkG7kAPp6veWLZi8Ya8iPggtsbVARrTkKF4Rcc2XhPpH0x7tMbQ0OxC3plyIiiq3EiX5qfwz7iABaFsE7NzIDdrCXnp49MsSO2y6FCA_MCzEfvzbuRXICOh_YbO6z6vBcxm40HKy2hGcdBMHVN7p5-RTivwtPlQu4uqNUxZIuPl_OB_HTY2XeFpt0P16FhFFysOA_YjcQUQXlIGVZ_ElOWn-wr0d5JKbAlHzsQc2NYssypB8O7nTsKY2eCycblyqNS7vE8BWJusew8sBsDqnKCWx8TnwKOKNlMywgn_10Bb8dZA3i8canrt0HLbvq99e0NAjHD87rRBOjQFnePWORJCKmPQ2OMi8BaCj65cEXd3AYe4bFAJR3OlfCdCrEGtWsaG5IIuUe4AK7LKS3BIlkEcUpGMuc4ho0-bLc4rcwB5MqXo2SRCPY-OiK8s6j25BCIRZYRdVPRsOq3ZPsMDYwzFtu52ybYXKKmoRz0eXFn3gSrgSvEkMAqLffM6Xz0M_WzB070eE4en8reeLSNgxcNpsxE1IFDHf57CO8L1U2V7-rH3gz-Gl8L1DBIFQ3HJKeBYK_gmBsHjqvjsBG1grGQ&isca=1"
+          "https://ff318bc3f96503c500e3630c6169cdc1b3a523553a0d9d12896581c-apidata.googleusercontent.com/download/storage/v1/b/staging.tumi-asbe-bolei-99b5a.appspot.com/o/myvideo.mp4?jk=ARTXCFFqNRgO0uZnbN9KV1yJ2MSdRBENlsPBmP2jYN3C1IoU-TbHALzxWCIan6kfts8HfOdAHPiB5HsTUlV5pEHj-hENpKRllNNswi3F9a5KGD0LFDQ5dDkcrN_dRVOKmxxKzNZCdcliP7S9Jk5LeQo4VzvPQKrt0gKK1Fg2MITgwEkj36QiJ3KfAxrGWUYULSLGUxafjODHVwDXiP0mzePlEQj040bRhvT9hfH7L6EMRmEzu0KOi1U17BeM-bzhm4PnqtzZu_kDuFk7f4NDrikO2AZ2n9RPQCTt4n-DBm0PCh7dm38Czr7YHT62gEzjT32iXUhGj_mlRYGcIBIs5m67t51mXjthhuhDeZJKbMWKRKRGQrM5I1Nwc4zq6DYmSDd_dR12_XPUbV2DR7E0ZPGcV7C6OgPmmPHY6Q8Hyq1f_BE_KQZ-YDqRKUU4D0pYacEcp1Rr1fVIghacQnJ9zUQ7l3-aDGl4Jw_OHtpIOuClbxQ3ykWwabZtBnoweNRKpgInFA1LxDQBKsfJ1OkoBuQ1XyPUuQ7TFwQF-zmZBTGLKjwyTeZXjaiOS0ejXYiLhrBBo1h_7cGrIQPWQpvveJxvv-qRShEPMOTkkzD7tq2gyXuA4-Ud_SYkTjXov5sdKc_RUnGO7gwf5NeZcYiq4TKbArl-iUgqB6ZKtxWkddy5XNKKNgwTdNp6yiSsHUcULGC4U25gBm9bfYIZ37I-Er4qPy5_BaLPuOAJGjZyAjnyiB9k3_sE0OTSmfgQlW3sWuBmiAhxpskEYFX9Xk-6eiJVkKM3cWondxeCtxaLI6T-QZcwHiJfIZsDaaniVXuJWJqYnbRxxX9cgizBL5LqdDNUdnHgLRLEU080ycx_upFBLgR4yQSrmMT-mtZdf8YNfNuok9KoxT0Llli7v5KRgdKF1YvniKkzKg76LT8KPpKzWxSi64p8s8YiKggimiq5T5LGBGNVn7IjgRjF-YOAWGJ9ZiGv6XU-4yM5JQZxdhkH1aCBUJqXhSfqzWipHOSi34iDfU2cPn4cy9KIuVcDmiubgErtszlu8xIPxfZJ_jX1haFq4mROXaJs7gvLO9ZOSU0sO7EASf60WYJb-7e-rJV380bLdYYXUEDR6mW2vKuJFPyICfYm1UGrUtWE3gpeWgb-fWqZqVgGANRfEB9apTDFaNLwx60aWqHaeZ0Qy6biGQw_BHmpGmOwua5GY4hl7Ulyyp6VcvWYi-etGWdU_mNwHD--xA&isca=1"
         }
         autoPlay
         muted
         loop
-      ></video> */}
+      ></video>
     </div>
   );
 }
