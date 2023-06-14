@@ -18,7 +18,6 @@ function VideoPhoto(props) {
       <div className=" VideoPhoto-div ">
         <img
           className="VideoPhoto-div__img"
-          // onMouseLeave={onMouseOutHandeler}
           onMouseEnter={onMouseInHandeler}
           src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/1418/1511418-v-f8338368d30d"
           alt=""

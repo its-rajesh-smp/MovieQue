@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["VideoPhoto.scss"],"names":[],"mappings":"AACA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EACE;EACA;EACA;EACA","file":"VideoPhoto.css"}
+{"version":3,"sources":["VideoPhoto.scss","VideoPhoto.css"],"names":[],"mappings":"AACA;EACE,iBAAA;EACA,gBAAA;EACA,wBAAA;EACA,oBAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;ACAF;ADCE;EACE,wBAAA;EACA,iBAAA;EACA,gBAAA;EACA,oBAAA;KAAA,iBAAA;ACCJ","file":"VideoPhoto.css"}

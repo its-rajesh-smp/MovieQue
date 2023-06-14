@@ -5,17 +5,55 @@
   font-family: roboto;
 }
 
+.VideoListContainer-div_btn_VideoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 .VideoListContainer-div__container {
   display: flex;
   gap: 5px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
   width: calc(100vw - 130px);
   overflow-x: scroll;
+  align-items: center;
 }
 
 .VideoListContainer-div__container::-webkit-scrollbar {
   display: none;
+}
+
+.swiperBtnPrev, .swiperBtnNext {
+  position: absolute;
+  z-index: 1;
+  height: 6.25rem;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  opacity: 0.4;
+  justify-content: center;
+  background-color: gainsboro;
+  border: none;
+  transition-property: all;
+  transition-duration: 300ms;
+}
+.swiperBtnPrev:hover, .swiperBtnNext:hover {
+  opacity: 1;
+}
+
+.swiperBtnPrev {
+  border-bottom-right-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+  left: 0;
+}
+
+.swiperBtnNext {
+  border-bottom-left-radius: 0.625rem;
+  border-top-left-radius: 0.625rem;
+  right: 0;
 }
 
 /* Smartphones  */

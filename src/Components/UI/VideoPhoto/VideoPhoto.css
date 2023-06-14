@@ -12,5 +12,6 @@
   border-radius: 0.3125rem;
   width: 11.4375rem;
   height: 15.25rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=VideoPhoto.css.map */
