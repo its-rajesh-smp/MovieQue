@@ -1,0 +1,12 @@
+.VideoPlayerPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("https://images.hdqwalls.com/wallpapers/avatar-8k-mi.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}/*# sourceMappingURL=VideoPlayerPage.css.map */
