@@ -1,17 +1,24 @@
 @import "../../../../Styles/color";
+
 .HomeVideoSlider-div {
   display: flex;
   // width: 100%;
 }
+
 .HomeVideoSlider-div__container {
   padding: torem(20px);
   display: flex;
   gap: torem(10px);
+
   img {
-    width: torem(78px);
-    height: torem(44px);
-    object-fit: cover;
+    width: torem(100px);
+    height: torem(100px);
+    object-fit: contain;
     border-radius: torem(5px);
+
+    &:hover {
+      scale: 1.5;
+    }
   }
 }
 
@@ -21,6 +28,7 @@
   .HomeVideoSlider-div {
     width: 100%;
   }
+
   .HomeVideoSlider-div__container {
     padding: 0px;
     width: 100%;

@@ -1,26 +1,21 @@
 import React from "react";
 import "./HomeVideoSlider.css";
+import { TMDB_POSTER_SMALL } from "../../../../Firebase/API_URL";
+import DATA from "../../../../Firebase/DATA";
 
 function HomeVideoSlider(props) {
   return (
     <div className=" HomeVideoSlider-div ">
       <div className="HomeVideoSlider-div__container">
-        <img
-          src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/463/1520463-h-755a7a4b7023"
-          alt=""
-        />
-        <img
-          src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/463/1520463-h-755a7a4b7023"
-          alt=""
-        />
-        <img
-          src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/463/1520463-h-755a7a4b7023"
-          alt=""
-        />
-        <img
-          src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/463/1520463-h-755a7a4b7023"
-          alt=""
-        />
+        {DATA.map((movie) => {
+          return (
+            <img
+              key={movie.id}
+              src={`${TMDB_POSTER_SMALL}/${movie.poster}`}
+              alt=""
+            />
+          );
+        })}
       </div>
     </div>
   );

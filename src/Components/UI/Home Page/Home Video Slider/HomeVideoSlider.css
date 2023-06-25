@@ -8,11 +8,14 @@
   gap: 0.625rem;
 }
 .HomeVideoSlider-div__container img {
-  width: 4.875rem;
-  height: 2.75rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 6.25rem;
+  height: 6.25rem;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 0.3125rem;
+}
+.HomeVideoSlider-div__container img:hover {
+  scale: 1.5;
 }
 
 /* Smartphones  */
