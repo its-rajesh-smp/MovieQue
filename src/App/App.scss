@@ -1,5 +1,6 @@
 @import "../Styles/color";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,11 +10,17 @@ html {
   background-color: $myback;
   font-size: toper(16);
 }
+
 .App-div {
   display: flex;
 }
+
 .remove_header {
   padding-left: 100px;
+}
+
+button {
+  cursor: pointer;
 }
 
 //? Media
@@ -22,16 +29,19 @@ html {
   html {
     font-size: toper(12);
   }
+
   .remove_header {
     padding-left: 0px;
   }
 }
+
 /* Tablet */
 @media only screen and (min-device-width: 480px) and (max-device-width: 1080px) {
   html {
     font-size: toper(15);
   }
 }
+
 /* Tablet 2 */
 @media only screen and (min-device-width: 480px) and (max-device-width: 900px) {
   html {

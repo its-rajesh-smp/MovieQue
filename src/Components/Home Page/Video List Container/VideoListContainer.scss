@@ -1,16 +1,19 @@
 @import "../../../Styles/color";
+
 .VideoListContainer-div {
   color: white;
   display: flex;
   flex-direction: column;
   font-family: roboto;
 }
-.VideoListContainer-div_btn_VideoContainer{
+
+.VideoListContainer-div_btn_VideoContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
+
 .VideoListContainer-div__container {
   display: flex;
   gap: 5px;
@@ -20,12 +23,15 @@
   overflow-x: scroll;
   align-items: center;
 }
+
 .VideoListContainer-div__container::-webkit-scrollbar {
   display: none;
 }
-.swiperBtnPrev,.swiperBtnNext{
+
+.swiperBtnPrev,
+.swiperBtnNext {
   position: absolute;
-  z-index: 1;
+  z-index: 100;
   height: torem(100px);
   padding: torem(20px);
   display: flex;
@@ -36,16 +42,19 @@
   border: none;
   transition-property: all;
   transition-duration: 300ms;
-  &:hover{
+
+  &:hover {
     opacity: 1;
   }
 }
-.swiperBtnPrev{
+
+.swiperBtnPrev {
   border-bottom-right-radius: torem(10px);
   border-top-right-radius: torem(10px);
   left: 0;
 }
-.swiperBtnNext{
+
+.swiperBtnNext {
   border-bottom-left-radius: torem(10px);
   border-top-left-radius: torem(10px);
   right: 0;

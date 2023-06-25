@@ -26,9 +26,10 @@
   display: none;
 }
 
-.swiperBtnPrev, .swiperBtnNext {
+.swiperBtnPrev,
+.swiperBtnNext {
   position: absolute;
-  z-index: 1;
+  z-index: 100;
   height: 6.25rem;
   padding: 1.25rem;
   display: flex;
@@ -40,7 +41,8 @@
   transition-property: all;
   transition-duration: 300ms;
 }
-.swiperBtnPrev:hover, .swiperBtnNext:hover {
+.swiperBtnPrev:hover,
+.swiperBtnNext:hover {
   opacity: 1;
 }
 
