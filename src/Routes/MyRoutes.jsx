@@ -7,6 +7,7 @@ function MyRoutes() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/player/:videoId" element={<VideoPlayerPage />} />
+      <Route path="*" element={<HomePage />} />
     </Routes>
   );
 }

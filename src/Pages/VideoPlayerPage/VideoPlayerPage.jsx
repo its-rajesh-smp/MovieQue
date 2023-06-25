@@ -3,6 +3,7 @@ import VideoPlayer from "../../Components/Video Page/VideoPlayer/VideoPlayer";
 import "./VideoPlayerPage.css";
 import DATA from "../../Firebase/DATA";
 import { TMDB_IMG } from "../../Firebase/API_URL";
+import { useEffect } from "react";
 function VideoPlayerPage() {
   const navigate = useNavigate();
   const { videoId } = useParams();
@@ -13,15 +14,21 @@ function VideoPlayerPage() {
     return movie.id == videoId;
   });
 
-  return (
-    <div
-      style={{ backgroundImage: `url(${TMDB_IMG}${currentVideo.backdrop})` }}
-      className="VideoPlayerPage remove_header"
-    >
-      <VideoPlayer currentVideo={currentVideo} />
-      <button onClick={onClickBackGoToHome}>BACK</button>
-    </div>
-  );
+  useEffect(() => {
+    if (!currentVideo) {
+      navigate("/")
+    }
+  }, [videoId])
+
+  return currentVideo && <div
+    style={{ backgroundImage: `url(${TMDB_IMG}${currentVideo.backdrop})` }}
+    className="VideoPlayerPage remove_header"
+  >
+    <VideoPlayer currentVideo={currentVideo} />
+    <button onClick={onClickBackGoToHome}>BACK</button>
+  </div>
+
+
 }
 
 export default VideoPlayerPage;
