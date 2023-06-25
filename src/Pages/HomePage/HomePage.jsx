@@ -9,10 +9,10 @@ function HomePage(props) {
     <div className=" HomePage-div remove_header ">
       <HomePageVideoContainer />
       <HomePageVideoDetails />
-      <VideoListContainer />
-      <VideoListContainer />
-      <VideoListContainer />
-      <VideoListContainer />
+      <VideoListContainer categoryId="28" />
+      <VideoListContainer categoryId="10752" />
+      <VideoListContainer categoryId="27" />
+      <VideoListContainer categoryId="10749" />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./HoverdVideoPhoto.css";
+import { TMDB_POSTER_HIGH } from "../../../Firebase/API_URL";
 
 function HoverdVideoPhoto(props) {
   return (
@@ -11,22 +12,15 @@ function HoverdVideoPhoto(props) {
       onMouseLeave={props.onMouseOutHandeler}
       className=" HoverdVideoPhoto-div "
     >
-      <img
-        src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/1418/1511418-v-f8338368d30d"
-        alt=""
-      />
+      <img src={`${TMDB_POSTER_HIGH}${props.data.poster_path}`} alt="" />
 
       <div className="HoverdVideoPhoto-div__container">
         <div className="btnGroup">
           <button>Watch Now</button>
           <button>+</button>
         </div>
-        <p>2023 | Tamil | Drama</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
-          eius ab facilis illum maiores assumenda inventore aliquid tenetur
-          dolore saepe.
-        </p>
+        <p>{props.data.original_title}</p>
+        <p className="overView">{props.data.overview}</p>
       </div>
       <div className="gradiant"></div>
     </div>

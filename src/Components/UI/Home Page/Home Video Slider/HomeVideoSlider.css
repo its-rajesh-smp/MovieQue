@@ -10,7 +10,8 @@
 .HomeVideoSlider-div__container img {
   width: 4.875rem;
   height: 2.75rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0.3125rem;
 }
 

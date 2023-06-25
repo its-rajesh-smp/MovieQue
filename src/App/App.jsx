@@ -3,13 +3,14 @@ import "./App.css";
 import Header from "../Components/Header/Header";
 import HomePage from "../Pages/HomePage/HomePage";
 import VideoPlayerPage from "../Pages/VideoPlayerPage/VideoPlayerPage";
+import useFetch from "../Hooks/useFetch";
 
 function App(props) {
   return (
     <div className=" App-div ">
-      {/* <Header /> */}
-      {/* <HomePage /> */}
-      <VideoPlayerPage />
+      <Header />
+      <HomePage />
+      {/* <VideoPlayerPage /> */}
     </div>
   );
 }

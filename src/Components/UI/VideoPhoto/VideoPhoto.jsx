@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./VideoPhoto.css";
 import HoverdVideoPhoto from "../Hoverd VideoPhoto/HoverdVideoPhoto";
 import { ShowOnDesktop } from "../../../Styles/Media";
+import { TMDB_POSTER_HIGH } from "../../../Firebase/API_URL";
 
 function VideoPhoto(props) {
   const [hovered, setHovered] = useState(false);
@@ -19,12 +20,13 @@ function VideoPhoto(props) {
         <img
           className="VideoPhoto-div__img"
           onMouseEnter={onMouseInHandeler}
-          src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_384/sources/r1/cms/prod/1418/1511418-v-f8338368d30d"
+          src={`${TMDB_POSTER_HIGH}${props.data.poster_path}`}
           alt=""
         />
         <ShowOnDesktop>
           {hovered && (
             <HoverdVideoPhoto
+              data={props.data}
               left={props.left}
               right={props.right}
               onMouseOutHandeler={onMouseOutHandeler}
