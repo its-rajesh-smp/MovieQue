@@ -1,1 +1,1 @@
-{"version":3,"sources":["VideoPlayer.scss","VideoPlayer.css"],"names":[],"mappings":"AAAE;EACE,WAAA;EACA,YAAA;ACCJ","file":"VideoPlayer.css"}
+{"version":3,"sources":["VideoPlayer.scss","VideoPlayer.css"],"names":[],"mappings":"AAEE;EACE,WAAA;EACA,YAAA;ACDJ;;ADIE;EACE,WAAA;EACA,YAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,gDAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;ACDJ;;ADIE;EACE;IACE,kEAAA;ECDJ;EDIE;IACE,kEAAA;ECFJ;EDKE;IACE,0EAAA;ECHJ;EDME;IACE,oEAAA;ECJJ;EDOE;IACE,kEAAA;ECLJ;AACF","file":"VideoPlayer.css"}

@@ -1,14 +1,32 @@
-.VideoPlayerPage{
+@import "../../Styles/color";
+
+.VideoPlayerPage {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     flex-direction: column;
     height: 100vh;
-    background-image: url("https://images.hdqwalls.com/wallpapers/avatar-8k-mi.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    gap: torem(5px);
 
-  
+    button {
+        top: 0;
+        padding: torem(10px) torem(50px);
+        background-color: $mygrey;
+        border: none;
+        color: white;
+        font-size: torem(12px);
+        font-weight: 600;
+        border-radius: torem(5px);
+        opacity: 0.5;
+        transition: all 500ms;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
 }

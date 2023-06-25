@@ -5,8 +5,23 @@
   width: 100%;
   flex-direction: column;
   height: 100vh;
-  background-image: url("https://images.hdqwalls.com/wallpapers/avatar-8k-mi.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  gap: 0.3125rem;
+}
+.VideoPlayerPage button {
+  top: 0;
+  padding: 0.625rem 3.125rem;
+  background-color: #8e8e90;
+  border: none;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.3125rem;
+  opacity: 0.5;
+  transition: all 500ms;
+}
+.VideoPlayerPage button:hover {
+  opacity: 1;
 }/*# sourceMappingURL=VideoPlayerPage.css.map */

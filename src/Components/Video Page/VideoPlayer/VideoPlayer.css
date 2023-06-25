@@ -1,4 +1,35 @@
 .videoPlayer {
   width: 80vw;
   height: auto;
+}
+
+.videoPlayerLoader {
+  width: 80vw;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: videoLoading 2s alternate infinite 1s;
+  font-size: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes videoLoading {
+  0% {
+    box-shadow: 0.9375rem 0.9375rem 6.25rem rgba(255, 255, 255, 0.532);
+  }
+  25% {
+    box-shadow: 1.5625rem 1.5625rem 6.25rem rgba(255, 255, 255, 0.532);
+  }
+  50% {
+    box-shadow: -0.9375rem -3.4375rem -torem(100px) rgba(255, 255, 255, 0.532);
+  }
+  75% {
+    box-shadow: -2.1875rem -2.1875rem 6.25rem rgba(255, 255, 255, 0.532);
+  }
+  100% {
+    box-shadow: 0.9375rem 0.9375rem 6.25rem rgba(255, 255, 255, 0.532);
+  }
 }/*# sourceMappingURL=VideoPlayer.css.map */

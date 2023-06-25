@@ -1,8 +1,14 @@
 import React from "react";
 import "./HoverdVideoPhoto.css";
 import { TMDB_POSTER_HIGH } from "../../../Firebase/API_URL";
+import { useNavigate } from "react-router-dom";
 
 function HoverdVideoPhoto(props) {
+  const navigate = useNavigate();
+  const onClickWatchNow = () => {
+    navigate(`/player/${props.generatedMovieId}`);
+  };
+
   return (
     <div
       style={{
@@ -16,7 +22,7 @@ function HoverdVideoPhoto(props) {
 
       <div className="HoverdVideoPhoto-div__container">
         <div className="btnGroup">
-          <button>Watch Now</button>
+          <button onClick={onClickWatchNow}>Watch Now</button>
           <button>+</button>
         </div>
         <p>{props.data.original_title}</p>

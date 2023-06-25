@@ -1,11 +1,34 @@
+import { useState } from "react";
+import { TMDB_IMG, TMDB_POSTER_HIGH } from "../../../Firebase/API_URL";
 import "./VideoPlayer.css";
-function VideoPlayer() {
+function VideoPlayer(props) {
+  const [loadVideo, setLoadVideo] = useState(true);
+
   return (
-    <video
-      className="videoPlayer"
-      controls
-      src="https://firebasestorage.googleapis.com/v0/b/movieque-fc953.appspot.com/o/myvideo.mp4?alt=media&token=38f986d3-03e3-4b1f-806b-102b3f456da3"
-    ></video>
+    <>
+      <video
+        hidden={loadVideo}
+        onLoadedData={() => {
+          setLoadVideo(false);
+        }}
+        className="videoPlayer"
+        controls
+        onLoadStart={() => {
+          setLoadVideo(true);
+        }}
+        src={props.currentVideo.videoLink}
+      ></video>
+      {loadVideo && (
+        <div
+          style={{
+            backgroundImage: `url(${TMDB_IMG}${props.currentVideo.backdrop})`,
+          }}
+          className="videoPlayerLoader"
+        >
+          <i className="bx bx-loader-circle bx-spin"></i>
+        </div>
+      )}
+    </>
   );
 }
 

@@ -47,6 +47,7 @@ function VideoListContainer(props) {
                   right={right}
                   data={movie}
                   key={movie.id}
+                  generatedMovieId={index % 4} // Because I Dont have more video stored
                   currentHover={props.currentHover}
                   setCurrentHover={props.setCurrentHover}
                 />

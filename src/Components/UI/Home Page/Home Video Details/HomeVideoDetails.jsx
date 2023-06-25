@@ -1,11 +1,17 @@
 import React from "react";
 import "./HomeVideoDetails.css";
 import DATA from "../../../../Firebase/DATA";
+import { useNavigate } from "react-router-dom";
 
 function HomeVideoDetails(props) {
   const [currentVideo] = DATA.filter((movie) => {
     return movie.id === props.currentVideo;
   });
+
+  const navigate = useNavigate();
+  const onClickWatchNow = () => {
+    navigate(`/player/${currentVideo.id}`);
+  };
 
   return (
     <div className=" HomeVideoDetails-div ">
@@ -20,7 +26,7 @@ function HomeVideoDetails(props) {
       </h3>
       <h3>Drama | Action</h3>
       <div className="btnGroup">
-        <button>Watch Now</button>
+        <button onClick={onClickWatchNow}>Watch Now</button>
         <button>+</button>
       </div>
     </div>

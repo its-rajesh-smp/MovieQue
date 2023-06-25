@@ -30,6 +30,7 @@ function VideoPhoto(props) {
         <ShowOnDesktop>
           {props.currentHover === props.data.id && (
             <HoverdVideoPhoto
+              generatedMovieId={props.generatedMovieId}
               data={props.data}
               left={props.left}
               right={props.right}

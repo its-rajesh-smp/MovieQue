@@ -1,4 +1,41 @@
-  .videoPlayer{
+  @import "../../../Styles/color";
+
+  .videoPlayer {
     width: 80vw;
     height: auto;
-}
+  }
+
+  .videoPlayerLoader {
+    width: 80vw;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: videoLoading 2s alternate infinite 1s;
+    font-size: torem(50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @keyframes videoLoading {
+    0% {
+      box-shadow: torem(15px) torem(15px) torem(100px) rgba(255, 255, 255, 0.532);
+    }
+
+    25% {
+      box-shadow: torem(25px) torem(25px) torem(100px) rgba(255, 255, 255, 0.532);
+    }
+
+    50% {
+      box-shadow: torem(-15px) torem(-55px) -torem(100px) rgba(255, 255, 255, 0.532);
+    }
+
+    75% {
+      box-shadow: torem(-35px) torem(-35px) torem(100px) rgba(255, 255, 255, 0.532);
+    }
+
+    100% {
+      box-shadow: torem(15px) torem(15px) torem(100px) rgba(255, 255, 255, 0.532);
+    }
+  }
