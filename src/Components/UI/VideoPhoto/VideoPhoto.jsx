@@ -3,6 +3,7 @@ import "./VideoPhoto.css";
 import HoverdVideoPhoto from "../Hoverd VideoPhoto/HoverdVideoPhoto";
 import { ShowOnDesktop } from "../../../Styles/Media";
 import { TMDB_POSTER_HIGH } from "../../../Firebase/API_URL";
+import { useNavigate } from "react-router-dom";
 
 function VideoPhoto(props) {
   const hoverTimeoutRef = useRef(null);
@@ -18,10 +19,16 @@ function VideoPhoto(props) {
     clearTimeout(hoverTimeoutRef.current);
   };
 
+  const navigate = useNavigate();
+  const onClickWatchNow = (e) => {
+    navigate(`/player/${props.generatedMovieId}`);
+  };
+
   return (
     <>
       <div className=" VideoPhoto-div ">
         <img
+          onClick={onClickWatchNow}
           className="VideoPhoto-div__img"
           onMouseEnter={onMouseInHandler}
           src={`${TMDB_POSTER_HIGH}${props.data.poster_path}`}

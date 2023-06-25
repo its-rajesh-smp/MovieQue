@@ -6,7 +6,7 @@ import HomePageVideoDetails from "../../Components/Home Page/Home Page Video Det
 
 function HomePage(props) {
   const [currentHover, setCurrentHover] = useState(null);
-  const [currentVideo, setCurrentVideo] = useState(1);
+  const [currentVideo, setCurrentVideo] = useState(0);
   return (
     <div className=" HomePage-div remove_header ">
       <HomePageVideoContainer
