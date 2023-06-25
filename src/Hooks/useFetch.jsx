@@ -24,6 +24,7 @@ function useFetch(genres, isFetched, setLoading) {
         setData((p) => {
           return [...p, ...data.results];
         });
+        console.log(data);
         isFetched.current = true
         setLoading(false)
       } catch (error) {

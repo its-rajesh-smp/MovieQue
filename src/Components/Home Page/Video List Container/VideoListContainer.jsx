@@ -5,6 +5,7 @@ import useFetch from "../../../Hooks/useFetch";
 
 function VideoListContainer(props) {
   const containerRef = useRef(null);
+  const [currentHover, setCurrentHover] = useState(null);
 
   // Maintaning useRef using this i am handeling the scroll event
   // There is some ui problem that why i am getting not fixed width of the container
@@ -45,8 +46,9 @@ function VideoListContainer(props) {
     const scrollLeft = box.scrollLeft;
 
     if (Math.ceil(width) + Math.ceil(scrollLeft) + 500 >= totalWidth && isFetched.current) {
-      setLoading(true)
+      console.log(isFetched.current);
       isFetched.current = false
+      setLoading(true)
       setPage((p) => p + 1);
     }
   };
@@ -64,10 +66,10 @@ function VideoListContainer(props) {
   return (
     movieList && (
       <div className=" VideoListContainer-div ">
-        <h3>Latest & Trending</h3>
+        <h3>{props.categoryName}</h3>
         <div className="VideoListContainer-div_btn_VideoContainer">
           <button onClick={onClickPrevBtn} className="swiperBtnPrev">
-            {"<"}
+            <i className='bx bx-caret-left'></i>
           </button>
           <div ref={containerRef} className="VideoListContainer-div__container">
             {movieList.map((movie, index) => {
@@ -80,14 +82,14 @@ function VideoListContainer(props) {
                   data={movie}
                   key={movie.id}
                   generatedMovieId={index % 4} // Because I Dont have more video stored
-                  currentHover={props.currentHover}
-                  setCurrentHover={props.setCurrentHover}
+                  currentHover={currentHover}
+                  setCurrentHover={setCurrentHover}
                 />
               );
             })}
           </div>
           <button onClick={onClickNextBtn} className="swiperBtnNext">
-            {loading ? "..." : ">"}
+            {loading ? <i className='bx bx-loader-circle bx-spin' ></i> : <i className='bx bx-caret-right'></i>}
           </button>
         </div>
       </div>

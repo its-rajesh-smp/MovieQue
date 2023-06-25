@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./VideoPhoto.css";
 import HoverdVideoPhoto from "../Hoverd VideoPhoto/HoverdVideoPhoto";
 import { ShowOnDesktop } from "../../../Styles/Media";
@@ -6,23 +6,23 @@ import { TMDB_POSTER_HIGH } from "../../../Firebase/API_URL";
 import { useNavigate } from "react-router-dom";
 
 function VideoPhoto(props) {
-  const hoverTimeoutRef = useRef(null);
 
   const onMouseInHandler = () => {
-    hoverTimeoutRef.current = setTimeout(() => {
-      props.setCurrentHover(props.data.id);
-    }, 200);
+    props.setCurrentHover(props.data.id);
+
   };
 
   const onMouseOutHandler = () => {
     props.setCurrentHover(null);
-    clearTimeout(hoverTimeoutRef.current);
   };
 
   const navigate = useNavigate();
   const onClickWatchNow = (e) => {
     navigate(`/player/${props.generatedMovieId}`);
   };
+
+
+
 
   return (
     <>
@@ -35,7 +35,9 @@ function VideoPhoto(props) {
           alt=""
         />
         <ShowOnDesktop>
+
           {props.currentHover === props.data.id && (
+
             <HoverdVideoPhoto
               generatedMovieId={props.generatedMovieId}
               data={props.data}
@@ -43,6 +45,7 @@ function VideoPhoto(props) {
               right={props.right}
               onMouseOutHandeler={onMouseOutHandler}
             />
+
           )}
         </ShowOnDesktop>
       </div>

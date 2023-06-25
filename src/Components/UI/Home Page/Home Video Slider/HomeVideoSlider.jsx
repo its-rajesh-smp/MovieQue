@@ -6,6 +6,7 @@ import DATA from "../../../../Firebase/DATA";
 function HomeVideoSlider(props) {
   // On Click Movie Image
   const onClickChangeMovie = (id) => {
+    localStorage.setItem('movie', id)
     props.setCurrentVideo(id);
   };
 

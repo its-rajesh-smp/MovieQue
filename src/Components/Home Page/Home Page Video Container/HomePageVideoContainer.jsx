@@ -18,11 +18,11 @@ function HomePageVideoContainer(props) {
       const windowY = window.scrollY;
       const newOpacity = 1 - windowY / distance;
       setVideoOpacity(newOpacity >= 0 ? newOpacity : 0);
-      if (windowY < distance) {
-        videoRef.current.play();
-      } else {
-        videoRef.current.pause();
-      }
+      // if (windowY < distance) {
+      //   videoRef.current.play();
+      // } else {
+      //   videoRef.current.pause();
+      // }
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -36,8 +36,10 @@ function HomePageVideoContainer(props) {
     if (videoRef.current.duration - videoRef.current.currentTime <= 5) {
       props.setCurrentVideo((p) => {
         if (p === 3) {
+          localStorage.setItem("movie", 0)
           return 0;
         } else {
+          localStorage.setItem("movie", p + 1)
           return p + 1;
         }
       });
@@ -52,7 +54,7 @@ function HomePageVideoContainer(props) {
       <div className="groundGraidiant"></div>
 
       {showVideo && <img src={`${TMDB_IMG}${currentVideo.backdrop}`} />}
-      <video
+      {/* <video
         onTimeUpdate={changeVideoOnRemainFiveSecond}
         ref={videoRef}
         src={currentVideo.videoLink}
@@ -65,7 +67,7 @@ function HomePageVideoContainer(props) {
         onLoadedData={() => {
           setShowVideo(false);
         }}
-      />
+      /> */}
     </div>
   );
 }
