@@ -38,8 +38,17 @@ function VideoListContainer(props) {
             {"<"}
           </button>
           <div ref={containerRef} className="VideoListContainer-div__container">
-            {movieList.map((movie) => {
-              return <VideoPhoto data={movie} key={movie.id} />;
+            {movieList.map((movie, index) => {
+              const left = index === 0 && true;
+              const right = index === movieList.length - 1 && true;
+              return (
+                <VideoPhoto
+                  left={left}
+                  right={right}
+                  data={movie}
+                  key={movie.id}
+                />
+              );
             })}
           </div>
           <button onClick={onClickNextBtn} className="swiperBtnNext">
