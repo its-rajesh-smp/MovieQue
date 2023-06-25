@@ -30,6 +30,8 @@ function HomePageVideoContainer(props) {
     };
   }, []);
 
+
+  // If The Video Timing Left 5 then changing the video
   const changeVideoOnRemainFiveSecond = () => {
     if (videoRef.current.duration - videoRef.current.currentTime <= 5) {
       props.setCurrentVideo((p) => {
@@ -53,7 +55,7 @@ function HomePageVideoContainer(props) {
       <video
         onTimeUpdate={changeVideoOnRemainFiveSecond}
         ref={videoRef}
-        // src={currentVideo.videoLink}
+        src={currentVideo.videoLink}
         autoPlay
         muted
         loop

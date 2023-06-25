@@ -1,33 +1,65 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./VideoListContainer.css";
 import VideoPhoto from "../../UI/VideoPhoto/VideoPhoto";
 import useFetch from "../../../Hooks/useFetch";
-import { TMDB_BY_CATEGORY } from "../../../Firebase/API_URL";
 
 function VideoListContainer(props) {
   const containerRef = useRef(null);
 
-  const { results: movieList } = useFetch(
-    `${TMDB_BY_CATEGORY}${props.categoryId}`
-  );
+  // Maintaning useRef using this i am handeling the scroll event
+  // There is some ui problem that why i am getting not fixed width of the container
+  // After hiting the scroll pin making the ref is false and when data fetch is done make it back true
+  const isFetched = useRef(true)
+  const [loading, setLoading] = useState(false)
 
+
+  // Fetching Movies
+  const [movieList, setPage] = useFetch(props.categoryId, isFetched, setLoading);
+
+  // On Click Next Button
   const onClickNextBtn = () => {
     const box = containerRef.current;
     const width = box.clientWidth;
     box.scrollTo({
-      left: box.scrollLeft + width,
+      left: Math.ceil(box.scrollLeft) + Math.ceil(width),
       behavior: "smooth",
     });
   };
 
+  // On Click Previous Button
   const onClickPrevBtn = () => {
     const box = containerRef.current;
     const width = box.clientWidth;
     box.scrollTo({
-      left: box.scrollLeft - width,
+      left: Math.ceil(box.scrollLeft) - Math.ceil(width),
       behavior: "smooth",
     });
   };
+
+
+  // Fetching Data on Scroll
+  const handleScroll = () => {
+    const box = containerRef.current;
+    const totalWidth = box.scrollWidth;
+    const width = box.clientWidth;
+    const scrollLeft = box.scrollLeft;
+
+    if (Math.ceil(width) + Math.ceil(scrollLeft) + 500 >= totalWidth && isFetched.current) {
+      setLoading(true)
+      isFetched.current = false
+      setPage((p) => p + 1);
+    }
+  };
+
+
+  // Adding Scroll Handeler
+  useEffect(() => {
+    const box = containerRef.current;
+    box.addEventListener("scroll", handleScroll);
+    return () => {
+      box.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     movieList && (
@@ -55,7 +87,7 @@ function VideoListContainer(props) {
             })}
           </div>
           <button onClick={onClickNextBtn} className="swiperBtnNext">
-            {">"}
+            {loading ? "..." : ">"}
           </button>
         </div>
       </div>

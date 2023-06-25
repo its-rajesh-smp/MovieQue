@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { TMDB_BY_CATEGORY } from "../Firebase/API_URL";
 
 const options = {
   method: "GET",
@@ -10,21 +11,29 @@ const options = {
   },
 };
 
-function useFetch(path) {
+function useFetch(genres, isFetched, setLoading) {
   const [data, setData] = useState([]);
+  const [page, setPage] = useState(1);
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await axios.get(path, options);
-        setData(data);
+        const { data } = await axios.get(
+          `${TMDB_BY_CATEGORY}&page=${page}&with_genres=${genres}`,
+          options
+        );
+        setData((p) => {
+          return [...p, ...data.results];
+        });
+        isFetched.current = true
+        setLoading(false)
       } catch (error) {
         console.log(error);
       }
     }
     fetchData();
-  }, [path]);
+  }, [genres, page]);
 
-  return data;
+  return [data, setPage];
 }
 
 export default useFetch;
