@@ -47,6 +47,8 @@ function VideoListContainer(props) {
                   right={right}
                   data={movie}
                   key={movie.id}
+                  currentHover={props.currentHover}
+                  setCurrentHover={props.setCurrentHover}
                 />
               );
             })}

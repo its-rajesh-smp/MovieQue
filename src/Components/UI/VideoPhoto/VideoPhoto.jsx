@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./VideoPhoto.css";
 import HoverdVideoPhoto from "../Hoverd VideoPhoto/HoverdVideoPhoto";
 import { ShowOnDesktop } from "../../../Styles/Media";
 import { TMDB_POSTER_HIGH } from "../../../Firebase/API_URL";
 
 function VideoPhoto(props) {
-  const [hovered, setHovered] = useState(false);
+  const hoverTimeoutRef = useRef(null);
 
-  const onMouseInHandeler = () => {
-    setHovered(true);
+  const onMouseInHandler = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      props.setCurrentHover(props.data.id);
+    }, 200);
   };
-  const onMouseOutHandeler = () => {
-    setHovered(false);
+
+  const onMouseOutHandler = () => {
+    props.setCurrentHover(null);
+    clearTimeout(hoverTimeoutRef.current);
   };
 
   return (
@@ -19,17 +23,17 @@ function VideoPhoto(props) {
       <div className=" VideoPhoto-div ">
         <img
           className="VideoPhoto-div__img"
-          onMouseEnter={onMouseInHandeler}
+          onMouseEnter={onMouseInHandler}
           src={`${TMDB_POSTER_HIGH}${props.data.poster_path}`}
           alt=""
         />
         <ShowOnDesktop>
-          {hovered && (
+          {props.currentHover === props.data.id && (
             <HoverdVideoPhoto
               data={props.data}
               left={props.left}
               right={props.right}
-              onMouseOutHandeler={onMouseOutHandeler}
+              onMouseOutHandeler={onMouseOutHandler}
             />
           )}
         </ShowOnDesktop>
