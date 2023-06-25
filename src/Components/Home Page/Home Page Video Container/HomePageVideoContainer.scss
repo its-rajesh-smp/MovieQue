@@ -1,4 +1,5 @@
 @import "../../../Styles/color";
+
 .HomePageVideoContainer-div {
   width: 100%;
   background-color: $myback;
@@ -7,21 +8,22 @@
   top: 0;
   z-index: -1;
   height: 90vh;
-  video {
-    object-fit: cover;
+
+  video,
+  img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 }
+
 .groundGraidiant {
   width: 100%;
   height: 50%;
   background: rgb(15, 16, 20);
-  background: linear-gradient(
-    0deg,
-    rgba(15, 16, 20, 1) 11%,
-    rgba(15, 16, 20, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(15, 16, 20, 1) 11%,
+      rgba(15, 16, 20, 0) 100%);
   bottom: 0;
   position: absolute;
 }

@@ -11,7 +11,6 @@ const options = {
 };
 
 function useFetch(path) {
-  console.log(path);
   const [data, setData] = useState([]);
   useEffect(() => {
     async function fetchData() {

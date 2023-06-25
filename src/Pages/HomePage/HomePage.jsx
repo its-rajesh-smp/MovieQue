@@ -9,7 +9,10 @@ function HomePage(props) {
   const [currentVideo, setCurrentVideo] = useState(1);
   return (
     <div className=" HomePage-div remove_header ">
-      <HomePageVideoContainer currentVideo={currentVideo} />
+      <HomePageVideoContainer
+        setCurrentVideo={setCurrentVideo}
+        currentVideo={currentVideo}
+      />
       <HomePageVideoDetails
         currentVideo={currentVideo}
         setCurrentVideo={setCurrentVideo}

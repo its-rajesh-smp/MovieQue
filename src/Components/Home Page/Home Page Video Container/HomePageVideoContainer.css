@@ -7,11 +7,12 @@
   z-index: -1;
   height: 90vh;
 }
-.HomePageVideoContainer-div video {
-  -o-object-fit: cover;
-     object-fit: cover;
+.HomePageVideoContainer-div video,
+.HomePageVideoContainer-div img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .groundGraidiant {
