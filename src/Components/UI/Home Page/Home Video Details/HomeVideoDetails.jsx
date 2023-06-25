@@ -1,10 +1,15 @@
 import React from "react";
 import "./HomeVideoDetails.css";
+import DATA from "../../../../Firebase/DATA";
 
 function HomeVideoDetails(props) {
+  const [currentVideo] = DATA.filter((movie) => {
+    return movie.id === props.currentVideo;
+  });
+
   return (
     <div className=" HomeVideoDetails-div ">
-      <h1>AVATAR</h1>
+      <h1>{currentVideo.name}</h1>
       <h3>
         <span>2023</span> | <span>1 Season</span> | <span>7 Languages</span>
       </h3>

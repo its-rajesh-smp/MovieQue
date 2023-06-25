@@ -15,6 +15,7 @@
     height: torem(100px);
     object-fit: contain;
     border-radius: torem(5px);
+    transition: all 500ms;
 
     &:hover {
       scale: 1.5;

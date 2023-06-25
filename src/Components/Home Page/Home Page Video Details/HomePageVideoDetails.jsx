@@ -6,8 +6,11 @@ import HomeVideoSlider from "../../UI/Home Page/Home Video Slider/HomeVideoSlide
 function HomePageVideoDetails(props) {
   return (
     <div className=" HomePageVideoDetails-div ">
-      <HomeVideoDetails />
-      <HomeVideoSlider />
+      <HomeVideoDetails currentVideo={props.currentVideo} />
+      <HomeVideoSlider
+        currentVideo={props.currentVideo}
+        setCurrentVideo={props.setCurrentVideo}
+      />
     </div>
   );
 }
