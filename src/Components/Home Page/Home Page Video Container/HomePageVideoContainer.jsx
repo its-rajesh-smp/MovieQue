@@ -18,11 +18,11 @@ function HomePageVideoContainer(props) {
       const windowY = window.scrollY;
       const newOpacity = 1 - windowY / distance;
       setVideoOpacity(newOpacity >= 0 ? newOpacity : 0);
-      // if (windowY < distance) {
-      //   videoRef.current.play();
-      // } else {
-      //   videoRef.current.pause();
-      // }
+      if (windowY < distance) {
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -54,7 +54,7 @@ function HomePageVideoContainer(props) {
       <div className="groundGraidiant"></div>
 
       {showVideo && <img src={`${TMDB_IMG}${currentVideo.backdrop}`} />}
-      {/* <video
+      <video
         onTimeUpdate={changeVideoOnRemainFiveSecond}
         ref={videoRef}
         src={currentVideo.videoLink}
@@ -67,7 +67,7 @@ function HomePageVideoContainer(props) {
         onLoadedData={() => {
           setShowVideo(false);
         }}
-      /> */}
+      />
     </div>
   );
 }
