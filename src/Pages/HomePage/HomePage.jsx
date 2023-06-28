@@ -21,7 +21,9 @@ function HomePage(props) {
     const totalHeight = container.scrollHeight
     const innerHeight = window.innerHeight
     const scrollHeight = window.scrollY
-    if (innerHeight + scrollHeight >= totalHeight) {
+
+    console.log(`TOTAL ${totalHeight}  PLUS ${innerHeight + scrollHeight}`);
+    if (innerHeight + scrollHeight + 10 >= totalHeight) {
       setPage(p => p + 1)
     }
   }

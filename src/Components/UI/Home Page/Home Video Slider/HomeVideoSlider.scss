@@ -2,13 +2,14 @@
 
 .HomeVideoSlider-div {
   display: flex;
-  // width: 100%;
 }
 
 .HomeVideoSlider-div__container {
   padding: torem(20px);
   display: flex;
   gap: torem(10px);
+  justify-content: center;
+  align-items: center;
 
   img {
     width: torem(100px);
@@ -33,7 +34,17 @@
   .HomeVideoSlider-div__container {
     padding: 0px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 30px;
     justify-content: center;
+    gap: 0px;
+
+    img {
+      width: torem(80px);
+      height: torem(80px);
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
   }
 }
