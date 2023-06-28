@@ -65,4 +65,8 @@
     padding: 5px;
     box-sizing: border-box;
   }
+  .categoryName {
+    padding: 5px 15px;
+    padding-top: 10px;
+  }
 }/*# sourceMappingURL=VideoListContainer.css.map */

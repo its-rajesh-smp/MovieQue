@@ -66,7 +66,7 @@ function VideoListContainer(props) {
   return (
     movieList && (
       <div className=" VideoListContainer-div ">
-        <h3>{props.categoryName}</h3>
+        <h3 className="categoryName">{props.categoryName}</h3>
         <div className="VideoListContainer-div_btn_VideoContainer">
           <button onClick={onClickPrevBtn} className="swiperBtnPrev">
             <i className='bx bx-caret-left'></i>
