@@ -7,6 +7,7 @@
   z-index: 1;
   border-radius: 10px;
   font-size: 14px;
+  animation: open-hover 150ms ease-in-out;
 }
 .HoverdVideoPhoto-div img {
   border-radius: 10px;
@@ -64,4 +65,15 @@
   max-height: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@keyframes open-hover {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
 }/*# sourceMappingURL=HoverdVideoPhoto.css.map */

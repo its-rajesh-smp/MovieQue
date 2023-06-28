@@ -2,24 +2,28 @@ import React, { useEffect, useRef, useState } from "react";
 import "./VideoPhoto.css";
 import HoverdVideoPhoto from "../Hoverd VideoPhoto/HoverdVideoPhoto";
 import { ShowOnDesktop } from "../../../Styles/Media";
-import { TMDB_POSTER_HIGH } from "../../../Firebase/API_URL";
+import { TMDB_IMG, TMDB_POSTER_HIGH, TMDB_POSTER_VERY_SMALL } from "../../../Firebase/API_URL";
 import { useNavigate } from "react-router-dom";
 
 function VideoPhoto(props) {
+  const navigate = useNavigate();
 
+  // Navigate To Player
+  const onClickWatchNow = (e) => {
+    navigate(`/player/${props.generatedMovieId}`);
+  };
+
+  // On Mouse In Show Hover Movie Photo
   const onMouseInHandler = () => {
     props.setCurrentHover(props.data.id);
 
   };
 
+  // On Mouse Out Off Hover Movie Photo
   const onMouseOutHandler = () => {
     props.setCurrentHover(null);
   };
 
-  const navigate = useNavigate();
-  const onClickWatchNow = (e) => {
-    navigate(`/player/${props.generatedMovieId}`);
-  };
 
 
 
