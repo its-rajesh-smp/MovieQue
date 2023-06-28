@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <header className=" Header-div ">
       <nav className="Header-div__nav">
-        {/* <Brand /> */}
+        <Brand />
         <NavLinks />
       </nav>
     </header>

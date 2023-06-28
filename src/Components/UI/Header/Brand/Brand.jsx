@@ -5,7 +5,7 @@ function Brand(props) {
   return (
     <div className=" Brand-div ">
       <h1>M</h1>
-      <p>Movie Q</p>
+      <p>MOVIE Q</p>
     </div>
   );
 }
